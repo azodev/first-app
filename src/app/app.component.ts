@@ -24,8 +24,10 @@ export class AppComponent {
           }
       });
   }*/
-  constructor(private platform: Platform, private router: Router) {
-    this.platform.backButton.subscribeWithPriority(5, () => {
+  constructor(
+    //private platform: Platform, private router: Router
+    ) {
+    /*this.platform.backButton.subscribeWithPriority(5, () => {
       console.log('Another handler was called!');
       const url = this.router.url;
       console.log(url);
@@ -42,6 +44,6 @@ export class AppComponent {
       console.log('Handler was called!');
   
       processNextHandler();
-    });
+    });*/
   }
 }

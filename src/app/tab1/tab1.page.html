@@ -12,6 +12,7 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  <ion-nav-link [routerLink]="['/about']" router-direction="forward">About</ion-nav-link>
+  <ion-nav-link [routerLink]="['items', id]" router-direction="forward">Item</ion-nav-link>
   <app-explore-container name="Tab 113 page"></app-explore-container>
 </ion-content>
