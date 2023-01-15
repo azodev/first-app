@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
   public id = 1;
-  constructor() {}
+  constructor(private router:Router) {}
+  redirect(){
+     const data = {name: 'abc', id: this.id};
+     const navData: NavigationExtras = {
+      queryParams : {
+        data: JSON.stringify(data)
+      }
+     };
 
+    this.router.navigate(['/about'], navData);
+  }
 }

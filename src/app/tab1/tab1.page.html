@@ -13,6 +13,10 @@
     </ion-toolbar>
   </ion-header>
   <ion-nav-link [routerLink]="['/about']" router-direction="forward">About</ion-nav-link>
+  <br>
   <ion-nav-link [routerLink]="['items', id]" router-direction="forward">Item</ion-nav-link>
+  <br>
+  <ion-nav-link (click)="redirect()" router-direction="forward">Redirect</ion-nav-link>
+  
   <app-explore-container name="Tab 113 page"></app-explore-container>
 </ion-content>
